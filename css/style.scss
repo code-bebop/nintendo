@@ -116,6 +116,9 @@ $n-orange: #FE7C0A;
       weight: 600;
     }
     letter-spacing: -.08rem;
+		margin: {
+			bottom: 40px;
+		}
     &__sub-title {
       font: {
         size: 1rem;
@@ -125,11 +128,48 @@ $n-orange: #FE7C0A;
   }
   &__list {
     &__item {
-      width: calc((1200px - (32px * 3) / 4));
+			display: inline-block;
+      width: calc((1200px - (32px * 3) )/ 4);
+			margin: {
+				right: 27px;
+				bottom: 40px;
+			}
+			&:nth-child(4n) {
+				margin: 0;
+			}
       &__header {
+				a {
+					display: block;
+				}
         &__img {
+					width: 100%;
+					vertical-align: bottom;
+					margin: {
+					bottom: 15px;
+				}
         }
+				&__text {
+					color: $n-red;
+				}
       }
+			&__title {
+				font: {
+					size: 1.2rem;
+					weight: 600;
+				}
+				display: block;
+				height: 72px;
+				letter-spacing: -.05rem;
+				line-height: 1.5rem;
+				margin: 7px 0;
+			}
+			&__footer {
+				font: {
+					size: .8rem;
+				}
+				color: #888;
+				line-height: 1.3rem;
+			}
     }
   }
 }
