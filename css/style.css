@@ -1,0 +1,83 @@
+.header {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #D9D9D9; }
+  .header__logo {
+    width: 15%;
+    background-color: #E60012; }
+    .header__logo a {
+      display: block;
+      height: 74px;
+      background: url("/img/logo_nintendo_red.gif") no-repeat center center; }
+  .header__nav {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: calc(85% - (140px + 74px)); }
+    .header__nav__container__item {
+      display: inline-block;
+      width: 20%;
+      height: 74px;
+      line-height: 74px;
+      border-right: 1px solid #D9D9D9;
+      margin-right: -6px;
+      text-align: center; }
+      .header__nav__container__item a {
+        display: block; }
+  .header__shop {
+    background: url(/img/btn_head_eshop.gif) no-repeat center center;
+    background-color: #FE7C0A;
+    display: block;
+    width: 140px;
+    height: 76px;
+    position: absolute;
+    top: -1px;
+    right: 76px; }
+  .header__search {
+    width: 74px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .header__search:after {
+      background: url(/img/search.png) no-repeat left top;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 27px;
+      width: 27px; }
+
+.section--slide {
+  width: 100%; }
+  .section--slide__item a {
+    display: block; }
+  .section--slide__info {
+    text-align: center;
+    letter-spacing: .5em;
+    margin-top: 15px; }
+    .section--slide__info__btn {
+      display: inline-block;
+      font-size: 3rem; }
+    .section--slide__info__index {
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      vertical-align: bottom;
+      font-size: 2rem;
+      font-weight: 600; }
+
+.section--news {
+  width: 1200px;
+  margin: 70px auto 0; }
+  .section--news__title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -.08rem; }
+    .section--news__title__sub-title {
+      font-size: 1rem;
+      font-weight: 200; }
+  .section--news__list__item {
+    width: calc((1200px - (32px * 3) / 4)); }
