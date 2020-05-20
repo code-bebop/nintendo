@@ -127,6 +127,7 @@ $n-orange: #FE7C0A;
     }
   }
   &__list {
+    position: relative;
     &__item {
 			display: inline-block;
       width: calc((1200px - (32px * 3) )/ 4);
@@ -140,13 +141,14 @@ $n-orange: #FE7C0A;
       &__header {
 				a {
 					display: block;
+        	margin: {
+	  				bottom: 15px;
+  				}
 				}
         &__img {
 					width: 100%;
 					vertical-align: bottom;
-					margin: {
-					bottom: 15px;
-				}
+
         }
 				&__text {
 					color: $n-red;
@@ -171,6 +173,364 @@ $n-orange: #FE7C0A;
 				line-height: 1.3rem;
 			}
     }
+    &__btn--more {
+      position: absolute;
+      top: -4.5rem;
+      right: 0;
+      color: $n-red;
+      font: {
+        size: 1.5rem;
+      }
+    }
+  }
+  margin: {
+    bottom: 85px;
   }
 }
 
+.section--banner--shop {
+  width: 100%;
+  margin: {
+    bottom: 85px;
+  }
+  background: {
+    color: $n-orange;
+  }
+  &__title {
+    text-indent: -9999px;
+    line-height: 140px;
+    background: url(/img/main_banner_eshop.gif) no-repeat center center;
+  }
+}
+
+.section--games {
+  width: 1200px;
+  margin: 70px auto 0;
+  &__title {
+    font: {
+      size: 2rem;
+      weight: 600;
+    }
+    letter-spacing: -.08rem;
+		margin: {
+			bottom: 40px;
+		}
+    &__sub-title {
+      font: {
+        size: 1rem;
+        weight: 200;
+      }
+    }
+  }
+  &__list {
+    position: relative;
+    &__item {
+			display: inline-block;
+      width: calc((1200px - (32px * 3) )/ 4);
+			margin: {
+				right: 27px;
+				bottom: 40px;
+			}
+			&:nth-child(4n) {
+				margin: 0;
+			}
+      &__header {
+				a {
+					display: block;
+          margin: {
+				  	bottom: 15px;
+				  }
+				}
+        &__img {
+					width: 100%;
+					vertical-align: bottom;
+					
+        }
+				&__text {
+					color: $n-red;
+          display: inline-block;
+				}
+        &__type {
+          float: right;
+          &__item {
+            display: inline-block;
+            width: 24px;
+            height: 16px;
+            background: {
+              color: $n-red;
+            }
+            color: #fff;
+            font: {
+              size: .75rem;
+              weight: 600;
+            }
+            text-align: center;
+            line-height: 16px;
+            border: {
+              radius: 4px;
+            }
+          }
+        }
+      }
+			&__title {
+				font: {
+					size: 1.2rem;
+					weight: 600;
+				}
+				display: block;
+				height: 48px;
+				letter-spacing: -.05rem;
+				line-height: 1.5rem;
+				margin: 7px 0;
+			}
+			&__footer {
+        &__release {
+          display: inline-block;
+          font: {
+					 size: .8rem;
+          }
+          color: #888;
+          line-height: 1.3rem;
+          &__dsc {
+          color: #1271CA;
+        } 
+        }
+        &__ico {
+          float: right;
+          background: url(/img/ico_lang_foreign_s.png) no-repeat left -116px;
+          width: 60px;
+          height: 38px;
+        }
+			}
+    }
+    &__btn--more {
+      position: absolute;
+      top: -4.5rem;
+      right: 0;
+      color: $n-red;
+      font: {
+        size: 1.5rem;
+      }
+    }
+  }
+  margin: {
+    bottom: 85px;
+  }
+}
+
+.section--teaser {
+  width: 1200px;
+  margin: 0 auto 80px;
+  &__item {
+    height: 140px;
+    width: calc((1200px - 64px) / 3);
+    display: inline-block;
+    margin-right: 27px;
+    &:last-child {
+      margin: 0;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.section--eshop {
+  width: 1200px;
+  margin: 0 auto 50px;
+  text-align: left;
+  &__title {
+    text-align: center;
+    font: {
+      size: 1.5rem;
+      weight: 600;
+    }
+    margin: {
+      bottom: 30px;
+    }
+  }
+  &__list {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    &__item {
+      width: 33.333333%;
+      height: 120px;
+      border: 1px solid #ccc;
+      border: {
+        bottom: 1px solid #000;
+      }
+      background: url(/img/unit_icon.png) no-repeat 17.55% 0;
+      display: table;
+      float: left;
+      &:nth-child(2) {
+        background-position-y: -119px;
+        border: {
+          left: none;
+        }
+      }
+      &:nth-child(3) {
+        background-position-y: -238px;
+        border: {
+          left: none;
+        }
+      }
+      a {
+        display: table-cell;
+        vertical-align: middle;
+        padding: {
+          left: 140px;
+        }
+      }
+      &__dsc {
+        background: url(/img/banner_arrow.png) no-repeat center right;
+        padding: {
+          right: 16px;
+        }
+      }
+    }
+  }
+}
+
+.section--notice {
+  width: 1200px;
+  margin: 0 auto 100px;
+  border: 1px solid #ccc;
+  border: {
+    left: none;
+    right: none;
+  }
+  padding: 22px 0;
+  &__header {
+    display: inline-block;
+    margin: {
+      right: 105px;
+    }
+    &__title {
+      display: inline-block;
+    }
+    &__btn--more {
+      background: url(/img/icon_plus.png) no-repeat center center;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+      box-sizing: content-box;
+      vertical-align: middle;
+    }
+  }
+  &__list {
+    display: inline-block;
+    &__item {
+      display: inline-block;
+      margin: {
+        left: 1em;
+      }
+
+      &__title {
+        color: #666;
+        &:before {
+          content: "\2022";
+          color: $n-red;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin: {
+            left: -1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section--go-top {
+  width: 100%;
+  height: 100px;
+  background: $n-red;
+  &__inner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0;
+    &__title {
+      background: url(/img/top.png) no-repeat top left;
+      display: block;
+      width: 122px;
+      height: 30px;
+      float: left;
+    }
+    &__btn {
+      background: url(/img/btn_switch_main_gotoTop.png) no-repeat center center;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      padding: 5px;
+      box-sizing: content-box;
+      float: right;
+    }
+  }
+}
+
+.section--bottom {
+  padding: 40px 0;
+  text-align: center;
+  &__header {
+    display: inline-block;
+    margin: 0 auto;
+    &__sns-list {
+      display: inline-block;
+      &__item {
+        display: inline-block;
+        a {
+          background: url(/img/bottom.png) no-repeat;
+          display: block;
+          width: 60px;
+          height: 60px;
+        }
+        &:nth-child(1) {
+          a {
+            background: {
+              position: left -160px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            background: {
+              position: -70px -160px;
+            }
+          }
+        }
+        &:nth-child(3) {
+          a {
+            background: {
+              position: -140px -160px;
+            }
+          }
+        }
+      }
+    }
+    &__btn-list {
+      display: inline-block;
+      &__nintendo {
+        background: url(/img/bottom.png) no-repeat top left;
+        display: inline-block;
+        width: 370px;
+        height: 60px;
+      }
+      &__amiibo {
+        background: url(/img/btn_footer_amiibo.png) no-repeat top left;
+        display: inline-block;
+        width: 370px;
+        height: 60px;
+      }
+    }
+  }
+}

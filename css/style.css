@@ -71,7 +71,8 @@
 
 .section--news {
   width: 1200px;
-  margin: 70px auto 0; }
+  margin: 70px auto 0;
+  margin-bottom: 85px; }
   .section--news__title {
     font-size: 2rem;
     font-weight: 600;
@@ -80,30 +81,262 @@
     .section--news__title__sub-title {
       font-size: 1rem;
       font-weight: 200; }
-  .section--news__list__item {
-    display: inline-block;
-    width: calc((1200px - (32px * 3) )/ 4);
-    margin-right: 27px;
+  .section--news__list {
+    position: relative; }
+    .section--news__list__item {
+      display: inline-block;
+      width: calc((1200px - (32px * 3) )/ 4);
+      margin-right: 27px;
+      margin-bottom: 40px; }
+      .section--news__list__item:nth-child(4n) {
+        margin: 0; }
+      .section--news__list__item__header a {
+        display: block;
+        margin-bottom: 15px; }
+      .section--news__list__item__header__img {
+        width: 100%;
+        vertical-align: bottom; }
+      .section--news__list__item__header__text {
+        color: #E60012; }
+      .section--news__list__item__title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: block;
+        height: 72px;
+        letter-spacing: -.05rem;
+        line-height: 1.5rem;
+        margin: 7px 0; }
+      .section--news__list__item__footer {
+        font-size: .8rem;
+        color: #888;
+        line-height: 1.3rem; }
+    .section--news__list__btn--more {
+      position: absolute;
+      top: -4.5rem;
+      right: 0;
+      color: #E60012;
+      font-size: 1.5rem; }
+
+.section--banner--shop {
+  width: 100%;
+  margin-bottom: 85px;
+  background-color: #FE7C0A; }
+  .section--banner--shop__title {
+    text-indent: -9999px;
+    line-height: 140px;
+    background: url(/img/main_banner_eshop.gif) no-repeat center center; }
+
+.section--games {
+  width: 1200px;
+  margin: 70px auto 0;
+  margin-bottom: 85px; }
+  .section--games__title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -.08rem;
     margin-bottom: 40px; }
-    .section--news__list__item:nth-child(4n) {
+    .section--games__title__sub-title {
+      font-size: 1rem;
+      font-weight: 200; }
+  .section--games__list {
+    position: relative; }
+    .section--games__list__item {
+      display: inline-block;
+      width: calc((1200px - (32px * 3) )/ 4);
+      margin-right: 27px;
+      margin-bottom: 40px; }
+      .section--games__list__item:nth-child(4n) {
+        margin: 0; }
+      .section--games__list__item__header a {
+        display: block;
+        margin-bottom: 15px; }
+      .section--games__list__item__header__img {
+        width: 100%;
+        vertical-align: bottom; }
+      .section--games__list__item__header__text {
+        color: #E60012;
+        display: inline-block; }
+      .section--games__list__item__header__type {
+        float: right; }
+        .section--games__list__item__header__type__item {
+          display: inline-block;
+          width: 24px;
+          height: 16px;
+          background-color: #E60012;
+          color: #fff;
+          font-size: .75rem;
+          font-weight: 600;
+          text-align: center;
+          line-height: 16px;
+          border-radius: 4px; }
+      .section--games__list__item__title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: block;
+        height: 48px;
+        letter-spacing: -.05rem;
+        line-height: 1.5rem;
+        margin: 7px 0; }
+      .section--games__list__item__footer__release {
+        display: inline-block;
+        font-size: .8rem;
+        color: #888;
+        line-height: 1.3rem; }
+        .section--games__list__item__footer__release__dsc {
+          color: #1271CA; }
+      .section--games__list__item__footer__ico {
+        float: right;
+        background: url(/img/ico_lang_foreign_s.png) no-repeat left -116px;
+        width: 60px;
+        height: 38px; }
+    .section--games__list__btn--more {
+      position: absolute;
+      top: -4.5rem;
+      right: 0;
+      color: #E60012;
+      font-size: 1.5rem; }
+
+.section--teaser {
+  width: 1200px;
+  margin: 0 auto 80px; }
+  .section--teaser__item {
+    height: 140px;
+    width: calc((1200px - 64px) / 3);
+    display: inline-block;
+    margin-right: 27px; }
+    .section--teaser__item:last-child {
       margin: 0; }
-    .section--news__list__item__header a {
-      display: block; }
-    .section--news__list__item__header__img {
-      width: 100%;
-      vertical-align: bottom;
-      margin-bottom: 15px; }
-    .section--news__list__item__header__text {
-      color: #E60012; }
-    .section--news__list__item__title {
-      font-size: 1.2rem;
-      font-weight: 600;
+    .section--teaser__item a {
       display: block;
-      height: 72px;
-      letter-spacing: -.05rem;
-      line-height: 1.5rem;
-      margin: 7px 0; }
-    .section--news__list__item__footer {
-      font-size: .8rem;
-      color: #888;
-      line-height: 1.3rem; }
+      width: 100%;
+      height: 100%; }
+
+.section--eshop {
+  width: 1200px;
+  margin: 0 auto 50px;
+  text-align: left; }
+  .section--eshop__title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px; }
+  .section--eshop__list:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .section--eshop__list__item {
+    width: 33.333333%;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #000;
+    background: url(/img/unit_icon.png) no-repeat 17.55% 0;
+    display: table;
+    float: left; }
+    .section--eshop__list__item:nth-child(2) {
+      background-position-y: -119px;
+      border-left: none; }
+    .section--eshop__list__item:nth-child(3) {
+      background-position-y: -238px;
+      border-left: none; }
+    .section--eshop__list__item a {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 140px; }
+    .section--eshop__list__item__dsc {
+      background: url(/img/banner_arrow.png) no-repeat center right;
+      padding-right: 16px; }
+
+.section--notice {
+  width: 1200px;
+  margin: 0 auto 100px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  padding: 22px 0; }
+  .section--notice__header {
+    display: inline-block;
+    margin-right: 105px; }
+    .section--notice__header__title {
+      display: inline-block; }
+    .section--notice__header__btn--more {
+      background: url(/img/icon_plus.png) no-repeat center center;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+      box-sizing: content-box;
+      vertical-align: middle; }
+  .section--notice__list {
+    display: inline-block; }
+    .section--notice__list__item {
+      display: inline-block;
+      margin-left: 1em; }
+      .section--notice__list__item__title {
+        color: #666; }
+        .section--notice__list__item__title:before {
+          content: "\2022";
+          color: #E60012;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em; }
+
+.section--go-top {
+  width: 100%;
+  height: 100px;
+  background: #E60012; }
+  .section--go-top__inner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0; }
+    .section--go-top__inner__title {
+      background: url(/img/top.png) no-repeat top left;
+      display: block;
+      width: 122px;
+      height: 30px;
+      float: left; }
+    .section--go-top__inner__btn {
+      background: url(/img/btn_switch_main_gotoTop.png) no-repeat center center;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      padding: 5px;
+      box-sizing: content-box;
+      float: right; }
+
+.section--bottom {
+  padding: 40px 0;
+  text-align: center; }
+  .section--bottom__header {
+    display: inline-block;
+    margin: 0 auto; }
+    .section--bottom__header__sns-list {
+      display: inline-block; }
+      .section--bottom__header__sns-list__item {
+        display: inline-block; }
+        .section--bottom__header__sns-list__item a {
+          background: url(/img/bottom.png) no-repeat;
+          display: block;
+          width: 60px;
+          height: 60px; }
+        .section--bottom__header__sns-list__item:nth-child(1) a {
+          background-position: left -160px; }
+        .section--bottom__header__sns-list__item:nth-child(2) a {
+          background-position: -70px -160px; }
+        .section--bottom__header__sns-list__item:nth-child(3) a {
+          background-position: -140px -160px; }
+    .section--bottom__header__btn-list {
+      display: inline-block; }
+      .section--bottom__header__btn-list__nintendo {
+        background: url(/img/bottom.png) no-repeat top left;
+        display: inline-block;
+        width: 370px;
+        height: 60px; }
+      .section--bottom__header__btn-list__amiibo {
+        background: url(/img/btn_footer_amiibo.png) no-repeat top left;
+        display: inline-block;
+        width: 370px;
+        height: 60px; }
