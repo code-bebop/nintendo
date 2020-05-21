@@ -15,15 +15,68 @@
     <h1 class="header__logo"><a href=""></a></h1>
     <nav class="header__nav">
       <ul class="header__nav__container">
-        <li class="header__nav__container__item"><a href="">Nintendo Switch</a></li>
-        <li class="header__nav__container__item"><a href="">닌텐도 3DS</a></li>
-        <li class="header__nav__container__item"><a href="">소프트웨어</a></li>
-        <li class="header__nav__container__item"><a href="">고객지원</a></li>
-        <li class="header__nav__container__item"><a href="">News</a></li>
+        <li class="header__nav__container__item">
+          <a href="">Nintendo Switch</a>
+          <ul class="header__nav__container__item__list">
+            <li class="header__nav__container__item__list__item"><a href="">특징</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">Nintendo Switch Lite</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">어떤 Switch?</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">라인업</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">기능 · 사양</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">주변기기</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">Nintendo Switch Online</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">Nintendo 지킴이 Switch</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">닌텐도 e숍</a></li>
+          </ul>
+        </li>
+        <li class="header__nav__container__item">
+          <a href="">닌텐도 3DS</a>
+          <ul class="header__nav__container__item__list">
+            <li class="header__nav__container__item__list__item"><a href="">닌텐도 3DS란?</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">New 닌텐도 3DS XL</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">New 닌텐도 2DS XL</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">기타 시리즈</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">닌텐도 e숍</a></li>
+          </ul>
+        </li>
+        <li class="header__nav__container__item">
+          <a href="">소프트웨어</a>
+          <ul class="header__nav__container__item__list">
+            <li class="header__nav__container__item__list__item"><a href="">Nintendo Switch 소프트웨어</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">닌텐도 3DS 소프트웨어</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">발매 예정 소프트웨어</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">스마트폰용 앱</a></li>
+          </ul>
+        </li>
+        <li class="header__nav__container__item">
+          <a href="">고객지원</a>
+          <ul class="header__nav__container__item__list">
+            <li class="header__nav__container__item__list__item"><a href="">Nintendo Switch 고객지원</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">Nintendo Switch Online 서포트</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">고객지원 홈페이지</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">네트워크 장애 발생 상황</a></li>
+          </ul>
+        </li>
+        <li class="header__nav__container__item">
+          <a href="">News</a>
+          <ul class="header__nav__container__item__list">
+            <li class="header__nav__container__item__list__item"><a href="">News</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">보도자료</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">알림</a></li>
+            <li class="header__nav__container__item__list__item"><a href="">이벤트</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <a class="header__shop" href=""></a>
     <a class="header__search" href=""></a>
+    <div class="header__search__div">
+      <form class="header__search__div__form" action="">
+        <input class="header__search__div__box" type="text" placeholder="키워드를 입력해주세요.">
+        <button class="header__search__div__btn">검 색</button> 
+      </form>
+      <a class="header__search__div__close" href="">검색 닫기</a>
+    </div>
   </header>
   <main class="main">
     <section class="section--slide">
@@ -79,8 +132,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/20c8357d2963be271d6b298a3c52487e.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">「제노블레이드 크로니클스 디피니티브 에디션」의 WebCM이 공개되었습니다.</h3>
           <footer class="section--news__list__item__footer">
             2020.05.19
@@ -91,8 +144,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/57793b8c3caf7f05fac2a178f8377e07.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">종이인형이 적?! 『페이퍼 마리오』시리즈의 최신작 Nintendo Switch 『페이퍼 마리오 종이접기 킹』이 7월...</h3>
           <footer class="section--news__list__item__footer">
             2020.05.14
@@ -103,8 +156,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/9e61d5789267f0ad54304416fa56df28.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">닌텐도 월페이퍼 컬렉션 공개!</h3>
           <footer class="section--news__list__item__footer">
             2020.05.13
@@ -115,8 +168,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/799c1d51be0a51a8fd74ea451d4c9759.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">「TETRIS® 99」 제11회 테트1컵 모여봐요 동물의 숲 컬래버레이션 축제! 개최</h3>
           <footer class="section--news__list__item__footer">
             2020.05.12
@@ -127,8 +180,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/c7e871f849a357ee674b318ccc9b3482.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">「제노블레이드 크로니클스 디피니티브 에디션」의 티저 페이지가 공개되었습니다.</h3>
           <footer class="section--news__list__item__footer">
             2020.05.08
@@ -139,8 +192,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/88d23a60662979b6962a6f4a607a79c7.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">「51 Worldwide Games」의 미리 다운로드 판매 시작!</h3>
           <footer class="section--news__list__item__footer">
             2020.05.07
@@ -151,8 +204,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/c1e8429f0cf148ec6e3f9b85c8660bd8.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">『루이지 맨션 3』의 추가 콘텐츠 「멀티 플레이 팩」 제2탄 배포!</h3>
           <footer class="section--news__list__item__footer">
             2020.04.30
@@ -163,8 +216,8 @@
         <article class="section--news__list__item">
           <header class="section--news__list__item__header">
             <a href=""><img class="section--news__list__item__header__img" src="/img/10579603b8c7cc2f9f7a7ada434ed737.jpg" alt=""></a>
-            <p class="section--news__list__item__header__text">뉴스</p>
           </header>
+          <p class="section--news__list__item__category">뉴스</p>
           <h3 class="section--news__list__item__title">『옥토패스 트래블러』 한국어 패치 배포 결정!</h3>
           <footer class="section--news__list__item__footer">
             2020.04.28
@@ -191,14 +244,14 @@
         <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/c7e871f849a357ee674b318ccc9b3482.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-                <strong class="section--games__list__item__header__type__item">DL</strong>
-              </span>
-            </div>
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+              <strong class="section--games__list__item__type__item">DL</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">제노블레이드 크로니클스 디피니티브 에디션</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -212,14 +265,14 @@
         <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/469.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-                <strong class="section--games__list__item__header__type__item">DL</strong>
-              </span>
-            </div>
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+              <strong class="section--games__list__item__type__item">DL</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">모여봐요 동물의 숲</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -233,14 +286,14 @@
                 <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/442.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-                <strong class="section--games__list__item__header__type__item">DL</strong>
-              </span>
-            </div>
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+              <strong class="section--games__list__item__type__item">DL</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">포켓몬스터 소드 · 실드</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -254,13 +307,13 @@
         <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/427.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-              </span>
-            </div>
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">링 피트 어드벤처</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -274,14 +327,14 @@
         <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/429.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-                <strong class="section--games__list__item__header__type__item">DL</strong>
-              </span>
-            </div>
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+              <strong class="section--games__list__item__type__item">DL</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">루이지 맨션 3</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -295,14 +348,14 @@
         <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/418.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-                <strong class="section--games__list__item__header__type__item">DL</strong>
-              </span>
-            </div>  
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+              <strong class="section--games__list__item__type__item">DL</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">젤다의 전설 꿈꾸는 섬</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -316,15 +369,14 @@
         <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/399.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-                <strong class="section--games__list__item__header__type__item">DL</strong>
-              </span>
-            </div>
-            
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+              <strong class="section--games__list__item__type__item">DL</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">파이어 엠블렘 풍화설월</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -335,18 +387,17 @@
             <p class="section--games__list__item__footer__ico"></p>
           </footer>
         </article>
-                <article class="section--games__list__item">
+        <article class="section--games__list__item">
           <header class="section--games__list__item__header">
             <a href=""><img class="section--games__list__item__header__img" src="/img/241.jpg" alt=""></a>
-            <div>
-              <p class="section--games__list__item__header__text">Nintendo Switch</p>
-              <span class="section--games__list__item__header__type">
-                <strong class="section--games__list__item__header__type__item">PK</strong>
-                <strong class="section--games__list__item__header__type__item">DL</strong>
-              </span>
-            </div>
-            
           </header>
+          <div>
+            <p class="section--games__list__item__category">Nintendo Switch</p>
+            <span class="section--games__list__item__type">
+              <strong class="section--games__list__item__type__item">PK</strong>
+              <strong class="section--games__list__item__type__item">DL</strong>
+            </span>
+          </div>
           <h3 class="section--games__list__item__title">젤다의 전설 브레스 오브 더 와일드</h3>
           <footer class="section--games__list__item__footer">
             <p class="section--games__list__item__footer__release">
@@ -428,9 +479,93 @@
           <a class="section--bottom__header__btn-list__amiibo" href=""></a>
         </div>
       </header>
+      <footer class="section--bottom__footer">
+        <ul class="section--bottom__footer__list">
+          <li class="section--bottom__footer__list__item">
+            <h4 class="section--bottom__footer__list__item__title">한국닌텐도</h4>
+            <ul class="section--bottom__footer__list__item__sub-list">
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">회사개요</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">찾아오시는 길</a>
+              </li>
+            </ul>
+          </li>
+          <li class="section--bottom__footer__list__item">
+            <h4 class="section--bottom__footer__list__item__title">본체 / amiibo</h4>
+            <ul class="section--bottom__footer__list__item__sub-list">
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">Nintendo Switch</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">New 닌텐도 3DS XL</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">New 닌텐도 2DS XL</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">amiibo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="section--bottom__footer__list__item">
+            <h4 class="section--bottom__footer__list__item__title">소프트웨어</h4>
+            <ul class="section--bottom__footer__list__item__sub-list">
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">Nintendo Switch 소프트웨어</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">닌텐도 3DS 소프트웨어</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">발매 예정 소프트웨어</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">스마트폰용 앱</a>
+              </li>
+            </ul>
+          </li>
+          <li class="section--bottom__footer__list__item">
+            <h4 class="section--bottom__footer__list__item__title">고객지원</h4>
+            <ul class="section--bottom__footer__list__item__sub-list">
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">Nintendo Switch</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">닌텐도 3DS</a>
+              </li>
+              <li class="section--bottom__footer__list__item__sub-list__item">
+                <a href="">고객지원 홈페이지</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </footer>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__inner__term">
+        <a class="footer__inner__term__btn--use" href="">이용약관</a>
+        <a class="footer__inner__term__btn--priv" href="">개인정보취급방침</a>
+      </div>
+      <div class="footer__inner__sup">
+        <p>고객지원 문의전화 : 1670-9900 (평일 오전 9시 30분~오후 5시 30분)</p>
+        <br/>
+        <p>※ 토/일/공휴일/회사 정기휴일 및 특별휴일 제외</p>
+      </div>
+      <address class="footer__inner__add">
+        ⓒ 2006 Nintendo of Korea Co., Ltd. All Rights Reserved.
+        <br/>
+        <span class="footer__inner__add__detail">상호명 : 한국닌텐도주식회사</span>
+        <span class="footer__inner__add__detail">대표자명 : 미우라 타카히로</span>
+        <span class="footer__inner__add__detail">사업자등록번호 : 120-87-03578</span>
+      </address>
+    </div>
+  </footer>
 </body>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 <script src="js/plugin/slick.js"></script>
 <script src="js/main.js"></script>
 </html>

@@ -1,0 +1,7 @@
+@import "./variables";
+
+@mixin de-1200px {
+  @media screen and (max-width: #{$breakpoint-1200px}) {
+    @content;
+  }
+}

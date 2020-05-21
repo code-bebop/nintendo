@@ -1,7 +1,8 @@
 .header {
   width: 100%;
   position: relative;
-  border-bottom: 1px solid #D9D9D9; }
+  border-bottom: 1px solid #D9D9D9;
+  z-index: 1; }
   .header__logo {
     width: 15%;
     background-color: #E60012; }
@@ -13,17 +14,37 @@
     position: absolute;
     top: 0;
     left: 15%;
-    width: calc(85% - (140px + 74px)); }
+    width: calc(85% - (140px + 74px));
+    z-index: 2; }
     .header__nav__container__item {
       display: inline-block;
+      position: relative;
       width: 20%;
       height: 74px;
       line-height: 74px;
       border-right: 1px solid #D9D9D9;
       margin-right: -6px;
-      text-align: center; }
+      text-align: center;
+      font-size: .95rem; }
       .header__nav__container__item a {
         display: block; }
+        .header__nav__container__item a:hover {
+          color: #E60012; }
+      .header__nav__container__item__list {
+        position: absolute;
+        width: 100%;
+        background: #F7F7F7;
+        text-align: left;
+        padding: 20px 30px;
+        border: 1px solid #D9D9D9;
+        display: none; }
+        .header__nav__container__item__list__item {
+          line-height: 50px;
+          font-size: .9rem; }
+          .header__nav__container__item__list__item a {
+            display: inline; }
+            .header__nav__container__item__list__item a:hover {
+              color: #E60012; }
   .header__shop {
     background: url(/img/btn_head_eshop.gif) no-repeat center center;
     background-color: #FE7C0A;
@@ -49,6 +70,38 @@
       transform: translate(-50%, -50%);
       height: 27px;
       width: 27px; }
+    .header__search__div {
+      width: 100%;
+      height: 150px;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      background: #F7F7F7;
+      text-align: center;
+      padding: 30px 0;
+      border: 1px solid #D9D9D9;
+      display: none; }
+      .header__search__div__box {
+        width: 1102px;
+        height: 15px;
+        padding: 13px;
+        margin-bottom: 30px; }
+      .header__search__div__btn {
+        position: absolute;
+        width: 98px;
+        height: 45px;
+        outline: none;
+        background: #E60012;
+        border: none;
+        color: #fff; }
+      .header__search__div__close:before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        vertical-align: bottom;
+        margin-right: 10px;
+        background: url(/img/ico_close_searchBox.gif) no-repeat center center; }
 
 .section--slide {
   width: 100%; }
@@ -90,13 +143,19 @@
       margin-bottom: 40px; }
       .section--news__list__item:nth-child(4n) {
         margin: 0; }
-      .section--news__list__item__header a {
-        display: block;
+      .section--news__list__item__header {
+        overflow: hidden;
         margin-bottom: 15px; }
-      .section--news__list__item__header__img {
-        width: 100%;
-        vertical-align: bottom; }
-      .section--news__list__item__header__text {
+        .section--news__list__item__header a {
+          display: block;
+          transition: all .5s; }
+          .section--news__list__item__header a:hover {
+            opacity: .8;
+            transform: scale(1.05); }
+        .section--news__list__item__header__img {
+          width: 100%;
+          vertical-align: bottom; }
+      .section--news__list__item__category {
         color: #E60012; }
       .section--news__list__item__title {
         font-size: 1.2rem;
@@ -147,18 +206,24 @@
       margin-bottom: 40px; }
       .section--games__list__item:nth-child(4n) {
         margin: 0; }
-      .section--games__list__item__header a {
-        display: block;
-        margin-bottom: 15px; }
-      .section--games__list__item__header__img {
-        width: 100%;
-        vertical-align: bottom; }
-      .section--games__list__item__header__text {
+      .section--games__list__item__header {
+        margin-bottom: 15px;
+        overflow: hidden; }
+        .section--games__list__item__header a {
+          display: block;
+          transition: all .5s; }
+          .section--games__list__item__header a:hover {
+            opacity: .8;
+            transform: scale(1.05); }
+        .section--games__list__item__header__img {
+          width: 100%;
+          vertical-align: bottom; }
+      .section--games__list__item__category {
         color: #E60012;
         display: inline-block; }
-      .section--games__list__item__header__type {
+      .section--games__list__item__type {
         float: right; }
-        .section--games__list__item__header__type__item {
+        .section--games__list__item__type__item {
           display: inline-block;
           width: 24px;
           height: 16px;
@@ -299,24 +364,51 @@
       float: left; }
     .section--go-top__inner__btn {
       background: url(/img/btn_switch_main_gotoTop.png) no-repeat center center;
+      position: relative;
       width: 12px;
       height: 12px;
       border: 2px solid #fff;
       border-radius: 12px;
       padding: 5px;
       box-sizing: content-box;
-      float: right; }
+      float: right;
+      transition: .1s ease-in; }
+      .section--go-top__inner__btn:before {
+        content: 'TOP';
+        display: none;
+        color: #E60012;
+        line-height: 12px;
+        margin-left: 5px;
+        float: left;
+        font-size: .8rem;
+        font-weight: 900; }
+      .section--go-top__inner__btn:after {
+        content: '';
+        display: none;
+        width: 12px;
+        height: 12px;
+        float: right;
+        background: url(/img/btn_switch_main_gotoTop_over.png) no-repeat center center; }
+      .section--go-top__inner__btn:hover {
+        width: 60px;
+        background: #fff; }
+        .section--go-top__inner__btn:hover:after {
+          display: inline-block; }
+        .section--go-top__inner__btn:hover:before {
+          display: inline-block; }
 
 .section--bottom {
   padding: 40px 0;
   text-align: center; }
   .section--bottom__header {
     display: inline-block;
-    margin: 0 auto; }
+    margin: 0 auto 60px; }
     .section--bottom__header__sns-list {
-      display: inline-block; }
+      display: inline-block;
+      margin-right: 45px; }
       .section--bottom__header__sns-list__item {
-        display: inline-block; }
+        display: inline-block;
+        margin-right: 24px; }
         .section--bottom__header__sns-list__item a {
           background: url(/img/bottom.png) no-repeat;
           display: block;
@@ -326,17 +418,99 @@
           background-position: left -160px; }
         .section--bottom__header__sns-list__item:nth-child(2) a {
           background-position: -70px -160px; }
-        .section--bottom__header__sns-list__item:nth-child(3) a {
-          background-position: -140px -160px; }
+        .section--bottom__header__sns-list__item:nth-child(3) {
+          margin: 0; }
+          .section--bottom__header__sns-list__item:nth-child(3) a {
+            background-position: -140px -160px; }
     .section--bottom__header__btn-list {
       display: inline-block; }
       .section--bottom__header__btn-list__nintendo {
         background: url(/img/bottom.png) no-repeat top left;
         display: inline-block;
         width: 370px;
-        height: 60px; }
+        height: 60px;
+        margin-right: 25px; }
       .section--bottom__header__btn-list__amiibo {
         background: url(/img/btn_footer_amiibo.png) no-repeat top left;
         display: inline-block;
         width: 370px;
         height: 60px; }
+  .section--bottom__footer__list__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 130px; }
+    .section--bottom__footer__list__item:last-child {
+      margin: 0; }
+    .section--bottom__footer__list__item__title {
+      font-weight: 600;
+      margin-bottom: 20px;
+      position: relative; }
+      .section--bottom__footer__list__item__title:before {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 3px;
+        background: #E60012;
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%); }
+    .section--bottom__footer__list__item__sub-list {
+      color: #737373; }
+      .section--bottom__footer__list__item__sub-list__item {
+        margin-bottom: 10px; }
+        .section--bottom__footer__list__item__sub-list__item:before {
+          content: '-';
+          display: inline-block; }
+        .section--bottom__footer__list__item__sub-list__item:last-child {
+          margin: 0; }
+
+.footer {
+  background: #F5F5F5;
+  color: #737373;
+  font-size: .9rem;
+  letter-spacing: -.1rem; }
+  .footer__inner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0; }
+    .footer__inner__term {
+      display: inline-block; }
+      .footer__inner__term__btn--use {
+        margin-right: 10px; }
+        .footer__inner__term__btn--use:after {
+          content: '|';
+          display: inline-block;
+          margin-left: 20px; }
+    .footer__inner__sup {
+      float: right;
+      text-align: right; }
+    .footer__inner__add {
+      line-height: 1.5rem; }
+
+@media screen and (max-width: 1200px) {
+  .header__logo {
+    width: calc(100% - (74px + 140px));
+    height: 60px;
+    text-align: left;
+    line-height: 70px;
+    padding-left: 20px; }
+    .header__logo a {
+      background: url(/img/logo_nintendo_red_m.gif) no-repeat center center;
+      background-size: cover;
+      width: 104px;
+      height: 25px;
+      display: inline-block; }
+  .header__nav {
+    width: 100%;
+    top: 60px;
+    left: 0;
+    background: #fff; }
+    .header__nav__container__item {
+      display: list-item;
+      width: 100%;
+      padding: 0 20px;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      border-bottom: 1px solid #D6D6D6; } }
