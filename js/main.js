@@ -15,31 +15,35 @@ function searchDropdown() {
 
 function navEffect() {
   let mql = window.matchMedia("screen and (max-width: 1200px)");
-  
-  if(mql.matches) {
-    $(".header__nav__container__item").off();
-    $(".header__nav__container").click((e)=>{
-      e.preventDefault();
-    }).accordion();
-  } else {
-    $(".header__nav__container__item").hover(
-        function() {
-          console.dir(mql);
-          $(this).find("ul").stop().slideDown();
-      }, function() {
-          $(this).find("ul").stop().slideUp();
+  function navHandler() {
+    if(mql.matches) {
+      $(".header__nav__container__item").off();
+      $(".header__nav__container").click((e)=>{
+        e.preventDefault();
+      }).accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: "content"
+      });
+    } else {
+      if($(".header__nav__container").hasClass("ui-accordion")) {
+        $(".header__nav__container").accordion("destroy");  
       }
-    )
+      $(".header__nav__container__item").hover(
+          function() {
+            console.dir(mql);
+            $(this).find("ul").stop().slideDown();
+        }, function() {
+            $(this).find("ul").stop().slideUp();
+        }
+      )      
+    }
   }
-  
+  navHandler();
   $(window).resize((e)=>{
     mql = window.matchMedia("screen and (max-width: 1200px)");
+    navHandler();
   })
-  
-
-  
-  
-  
 }
 
 function pagingInfo() {

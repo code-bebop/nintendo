@@ -16,7 +16,7 @@ $n-orange: #FE7C0A;
     a {
       display: block;
       height: 74px;
-      background: url("/img/logo_nintendo_red.gif") no-repeat center center;  
+      background: url("../img/logo_nintendo_red.gif") no-repeat center center;  
     }
   }
   &__nav {
@@ -73,7 +73,7 @@ $n-orange: #FE7C0A;
     }
   }
   &__shop {
-    background: url(/img/btn_head_eshop.gif) no-repeat center center;
+    background: url(../img/btn_head_eshop.gif) no-repeat center center;
     background-color: $n-orange;
     display: block;
     width: 140px;
@@ -89,7 +89,7 @@ $n-orange: #FE7C0A;
     top: 0;
     right: 0;
     &:after {
-      background: url(/img/search.png) no-repeat left top;
+      background: url(../img/search.png) no-repeat left top;
       content: '';
       display: block;
       position: absolute;
@@ -133,7 +133,7 @@ $n-orange: #FE7C0A;
           height: 14px;
           vertical-align: bottom;
           margin-right: 10px;
-          background: url(/img/ico_close_searchBox.gif) no-repeat center center;
+          background: url(../img/ico_close_searchBox.gif) no-repeat center center;
         }
       }
     }
@@ -145,6 +145,10 @@ $n-orange: #FE7C0A;
   &__item {
     a {
       display: block;
+      
+    }
+    &__img {
+      width: 100%;
     }
   }
   &__info {
@@ -269,7 +273,7 @@ $n-orange: #FE7C0A;
   &__title {
     text-indent: -9999px;
     line-height: 140px;
-    background: url(/img/main_banner_eshop.gif) no-repeat center center;
+    background: url(../img/main_banner_eshop.gif) no-repeat center center;
   }
 }
 
@@ -372,7 +376,7 @@ $n-orange: #FE7C0A;
         }
         &__ico {
           float: right;
-          background: url(/img/ico_lang_foreign_s.png) no-repeat left -116px;
+          background: url(../img/ico_lang_foreign_s.png) no-repeat left -116px;
           width: 60px;
           height: 38px;
         }
@@ -439,7 +443,7 @@ $n-orange: #FE7C0A;
       border: {
         bottom: 1px solid #000;
       }
-      background: url(/img/unit_icon.png) no-repeat 17.55% 0;
+      background: url(../img/unit_icon.png) no-repeat 17.55% 0;
       display: table;
       float: left;
       &:nth-child(2) {
@@ -462,7 +466,7 @@ $n-orange: #FE7C0A;
         }
       }
       &__dsc {
-        background: url(/img/banner_arrow.png) no-repeat center right;
+        background: url(../img/banner_arrow.png) no-repeat center right;
         padding: {
           right: 16px;
         }
@@ -489,7 +493,7 @@ $n-orange: #FE7C0A;
       display: inline-block;
     }
     &__btn--more {
-      background: url(/img/icon_plus.png) no-repeat center center;
+      background: url(../img/icon_plus.png) no-repeat center center;
       display: inline-block;
       width: 8px;
       height: 8px;
@@ -534,14 +538,14 @@ $n-orange: #FE7C0A;
     margin: 0 auto;
     padding: 35px 0;
     &__title {
-      background: url(/img/top.png) no-repeat top left;
+      background: url(../img/top.png) no-repeat top left;
       display: block;
       width: 122px;
       height: 30px;
       float: left;
     }
     &__btn {
-      background: url(/img/btn_switch_main_gotoTop.png) no-repeat center center;
+      background: url(../img/btn_switch_main_gotoTop.png) no-repeat center center;
       position: relative;
       width: 12px;
       height: 12px;
@@ -569,7 +573,7 @@ $n-orange: #FE7C0A;
         width: 12px;
         height: 12px;
         float: right;
-        background: url(/img/btn_switch_main_gotoTop_over.png) no-repeat center center;
+        background: url(../img/btn_switch_main_gotoTop_over.png) no-repeat center center;
       }
       &:hover {
         width: 60px;
@@ -602,7 +606,7 @@ $n-orange: #FE7C0A;
           right: 24px;
         }
         a {
-          background: url(/img/bottom.png) no-repeat;
+          background: url(../img/bottom.png) no-repeat;
           display: block;
           width: 60px;
           height: 60px;
@@ -634,7 +638,7 @@ $n-orange: #FE7C0A;
     &__btn-list {
       display: inline-block;
       &__nintendo {
-        background: url(/img/bottom.png) no-repeat top left;
+        background: url(../img/bottom.png) no-repeat top left;
         display: inline-block;
         width: 370px;
         height: 60px;
@@ -643,7 +647,7 @@ $n-orange: #FE7C0A;
         }
       }
       &__amiibo {
-        background: url(/img/btn_footer_amiibo.png) no-repeat top left;
+        background: url(../img/btn_footer_amiibo.png) no-repeat top left;
         display: inline-block;
         width: 370px;
         height: 60px;
@@ -748,7 +752,7 @@ $n-orange: #FE7C0A;
       line-height: 70px;
       padding-left: 20px;
       a {
-        background: url(/img/logo_nintendo_red_m.gif) no-repeat center center;
+        background: url(../img/logo_nintendo_red_m.gif) no-repeat center center;
         background-size: cover;
         width: 104px;
         height: 25px;
@@ -762,15 +766,21 @@ $n-orange: #FE7C0A;
       background: #fff;
       &__container {
         &__item {
-          display: list-item;
           width: 100%;
-          padding: 0 20px;
+          height: auto;
           text-align: left;
+          margin-bottom: -2px;
           font: {
             size: 1rem;
             weight: 600;
           }
           border-bottom: 1px solid #D6D6D6;
+          &__list {
+            position: relative;
+            &__item {
+              
+            }
+          }
         }
       }
     }

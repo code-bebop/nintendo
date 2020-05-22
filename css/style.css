@@ -9,7 +9,7 @@
     .header__logo a {
       display: block;
       height: 74px;
-      background: url("/img/logo_nintendo_red.gif") no-repeat center center; }
+      background: url("../img/logo_nintendo_red.gif") no-repeat center center; }
   .header__nav {
     position: absolute;
     top: 0;
@@ -46,7 +46,7 @@
             .header__nav__container__item__list__item a:hover {
               color: #E60012; }
   .header__shop {
-    background: url(/img/btn_head_eshop.gif) no-repeat center center;
+    background: url(../img/btn_head_eshop.gif) no-repeat center center;
     background-color: #FE7C0A;
     display: block;
     width: 140px;
@@ -61,7 +61,7 @@
     top: 0;
     right: 0; }
     .header__search:after {
-      background: url(/img/search.png) no-repeat left top;
+      background: url(../img/search.png) no-repeat left top;
       content: '';
       display: block;
       position: absolute;
@@ -101,12 +101,14 @@
         height: 14px;
         vertical-align: bottom;
         margin-right: 10px;
-        background: url(/img/ico_close_searchBox.gif) no-repeat center center; }
+        background: url(../img/ico_close_searchBox.gif) no-repeat center center; }
 
 .section--slide {
   width: 100%; }
   .section--slide__item a {
     display: block; }
+  .section--slide__item__img {
+    width: 100%; }
   .section--slide__info {
     text-align: center;
     letter-spacing: .5em;
@@ -183,7 +185,7 @@
   .section--banner--shop__title {
     text-indent: -9999px;
     line-height: 140px;
-    background: url(/img/main_banner_eshop.gif) no-repeat center center; }
+    background: url(../img/main_banner_eshop.gif) no-repeat center center; }
 
 .section--games {
   width: 1200px;
@@ -251,7 +253,7 @@
           color: #1271CA; }
       .section--games__list__item__footer__ico {
         float: right;
-        background: url(/img/ico_lang_foreign_s.png) no-repeat left -116px;
+        background: url(../img/ico_lang_foreign_s.png) no-repeat left -116px;
         width: 60px;
         height: 38px; }
     .section--games__list__btn--more {
@@ -294,7 +296,7 @@
     height: 120px;
     border: 1px solid #ccc;
     border-bottom: 1px solid #000;
-    background: url(/img/unit_icon.png) no-repeat 17.55% 0;
+    background: url(../img/unit_icon.png) no-repeat 17.55% 0;
     display: table;
     float: left; }
     .section--eshop__list__item:nth-child(2) {
@@ -308,7 +310,7 @@
       vertical-align: middle;
       padding-left: 140px; }
     .section--eshop__list__item__dsc {
-      background: url(/img/banner_arrow.png) no-repeat center right;
+      background: url(../img/banner_arrow.png) no-repeat center right;
       padding-right: 16px; }
 
 .section--notice {
@@ -324,7 +326,7 @@
     .section--notice__header__title {
       display: inline-block; }
     .section--notice__header__btn--more {
-      background: url(/img/icon_plus.png) no-repeat center center;
+      background: url(../img/icon_plus.png) no-repeat center center;
       display: inline-block;
       width: 8px;
       height: 8px;
@@ -357,13 +359,13 @@
     margin: 0 auto;
     padding: 35px 0; }
     .section--go-top__inner__title {
-      background: url(/img/top.png) no-repeat top left;
+      background: url(../img/top.png) no-repeat top left;
       display: block;
       width: 122px;
       height: 30px;
       float: left; }
     .section--go-top__inner__btn {
-      background: url(/img/btn_switch_main_gotoTop.png) no-repeat center center;
+      background: url(../img/btn_switch_main_gotoTop.png) no-repeat center center;
       position: relative;
       width: 12px;
       height: 12px;
@@ -388,7 +390,7 @@
         width: 12px;
         height: 12px;
         float: right;
-        background: url(/img/btn_switch_main_gotoTop_over.png) no-repeat center center; }
+        background: url(../img/btn_switch_main_gotoTop_over.png) no-repeat center center; }
       .section--go-top__inner__btn:hover {
         width: 60px;
         background: #fff; }
@@ -410,7 +412,7 @@
         display: inline-block;
         margin-right: 24px; }
         .section--bottom__header__sns-list__item a {
-          background: url(/img/bottom.png) no-repeat;
+          background: url(../img/bottom.png) no-repeat;
           display: block;
           width: 60px;
           height: 60px; }
@@ -425,13 +427,13 @@
     .section--bottom__header__btn-list {
       display: inline-block; }
       .section--bottom__header__btn-list__nintendo {
-        background: url(/img/bottom.png) no-repeat top left;
+        background: url(../img/bottom.png) no-repeat top left;
         display: inline-block;
         width: 370px;
         height: 60px;
         margin-right: 25px; }
       .section--bottom__header__btn-list__amiibo {
-        background: url(/img/btn_footer_amiibo.png) no-repeat top left;
+        background: url(../img/btn_footer_amiibo.png) no-repeat top left;
         display: inline-block;
         width: 370px;
         height: 60px; }
@@ -496,7 +498,7 @@
     line-height: 70px;
     padding-left: 20px; }
     .header__logo a {
-      background: url(/img/logo_nintendo_red_m.gif) no-repeat center center;
+      background: url(../img/logo_nintendo_red_m.gif) no-repeat center center;
       background-size: cover;
       width: 104px;
       height: 25px;
@@ -507,10 +509,12 @@
     left: 0;
     background: #fff; }
     .header__nav__container__item {
-      display: list-item;
       width: 100%;
-      padding: 0 20px;
+      height: auto;
       text-align: left;
+      margin-bottom: -2px;
       font-size: 1rem;
       font-weight: 600;
-      border-bottom: 1px solid #D6D6D6; } }
+      border-bottom: 1px solid #D6D6D6; }
+      .header__nav__container__item__list {
+        position: relative; } }
