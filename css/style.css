@@ -81,15 +81,22 @@
       padding: 30px 0;
       border: 1px solid #D9D9D9;
       display: none; }
+      .header__search__div__form {
+        height: 45px;
+        width: 62.5%;
+        margin: 0 auto 30px; }
       .header__search__div__box {
-        width: 1102px;
-        height: 15px;
-        padding: 13px;
-        margin-bottom: 30px; }
+        display: inline-block;
+        width: calc(100% - 98px);
+        height: 45px;
+        box-sizing: border-box;
+        padding-left: 15px;
+        float: left; }
       .header__search__div__btn {
-        position: absolute;
+        display: inline-block;
         width: 98px;
         height: 45px;
+        float: left;
         outline: none;
         background: #E60012;
         border: none;
@@ -140,7 +147,7 @@
     position: relative; }
     .section--news__list__item {
       display: inline-block;
-      width: calc((1200px - (32px * 3) )/ 4);
+      width: calc((100% - (32px * 3) )/ 4);
       margin-right: 27px;
       margin-bottom: 40px; }
       .section--news__list__item:nth-child(4n) {
@@ -158,6 +165,7 @@
           width: 100%;
           vertical-align: bottom; }
       .section--news__list__item__category {
+        font-size: .8rem;
         color: #E60012; }
       .section--news__list__item__title {
         font-size: 1.2rem;
@@ -203,7 +211,7 @@
     position: relative; }
     .section--games__list__item {
       display: inline-block;
-      width: calc((1200px - (32px * 3) )/ 4);
+      width: calc((100% - (32px * 3) )/ 4);
       margin-right: 27px;
       margin-bottom: 40px; }
       .section--games__list__item:nth-child(4n) {
@@ -221,6 +229,7 @@
           width: 100%;
           vertical-align: bottom; }
       .section--games__list__item__category {
+        font-size: .8rem;
         color: #E60012;
         display: inline-block; }
       .section--games__list__item__type {
@@ -249,8 +258,6 @@
         font-size: .8rem;
         color: #888;
         line-height: 1.3rem; }
-        .section--games__list__item__footer__release__dsc {
-          color: #1271CA; }
       .section--games__list__item__footer__ico {
         float: right;
         background: url(../img/ico_lang_foreign_s.png) no-repeat left -116px;
@@ -268,7 +275,7 @@
   margin: 0 auto 80px; }
   .section--teaser__item {
     height: 140px;
-    width: calc((1200px - 64px) / 3);
+    width: calc((100% - 64px) / 3);
     display: inline-block;
     margin-right: 27px; }
     .section--teaser__item:last-child {
@@ -277,6 +284,8 @@
       display: block;
       width: 100%;
       height: 100%; }
+    .section--teaser__item__img {
+      width: 100%; }
 
 .section--eshop {
   width: 1200px;
@@ -360,7 +369,7 @@
     padding: 35px 0; }
     .section--go-top__inner__title {
       background: url(../img/top.png) no-repeat top left;
-      display: block;
+      display: inline-block;
       width: 122px;
       height: 30px;
       float: left; }
@@ -492,8 +501,8 @@
 
 @media screen and (max-width: 1200px) {
   .header__logo {
-    width: calc(100% - (74px + 140px));
-    height: 60px;
+    width: calc(100% - 60px);
+    height: 61px;
     text-align: left;
     line-height: 70px;
     padding-left: 20px; }
@@ -503,6 +512,50 @@
       width: 104px;
       height: 25px;
       display: inline-block; }
+  .header__gnb {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 65px;
+    transform: translateY(-50%); }
+    .header__gnb.on:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 56px;
+      background: url(../img/btn_gnb_m.png) no-repeat left -31px;
+      background-size: 31px 62px;
+      width: 28px;
+      height: 28px;
+      transform: translateY(-50%); }
+    .header__gnb:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 56px;
+      background: url(../img/btn_gnb_m.png) no-repeat left top;
+      background-size: 31px 62px;
+      width: 28px;
+      height: 28px;
+      transform: translateY(-50%); }
+  .header__shop {
+    background-position: left -5px;
+    width: 60px;
+    height: 62px;
+    right: 0; }
+  .header__search {
+    width: 56px;
+    right: 70px; }
+    .header__search:after {
+      background-position: left -15px;
+      background-size: 32px 48px;
+      width: 28px;
+      height: 28px;
+      left: 65%; }
   .header__nav {
     width: 100%;
     top: 60px;
@@ -512,9 +565,104 @@
       width: 100%;
       height: auto;
       text-align: left;
-      margin-bottom: -2px;
       font-size: 1rem;
       font-weight: 600;
-      border-bottom: 1px solid #D6D6D6; }
+      border-right: none;
+      line-height: 50px;
+      margin-bottom: -1px; }
+      .header__nav__container__item a {
+        outline: none;
+        background: #fff;
+        border-top: 1px solid #D6D6D6;
+        border-bottom: 1px solid #D6D6D6;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #000; }
       .header__nav__container__item__list {
-        position: relative; } }
+        position: relative;
+        background: #F7F7F7;
+        border-bottom: 1px solid #D6D6D6; }
+        .header__nav__container__item__list__item {
+          line-height: 2.2rem; }
+          .header__nav__container__item__list__item a {
+            border: none;
+            background: #F7F7F7;
+            font-size: 1rem;
+            font-weight: 300; }
+  .header__search__div {
+    top: 60px; }
+    .header__search__div__form {
+      width: 95%; }
+  .section--news {
+    width: 100%;
+    padding: 0 20px; }
+    .section--news__list__item__title {
+      font-size: .9rem;
+      line-height: normal; }
+  .section--games {
+    width: 100%;
+    padding: 0 20px; }
+    .section--games__list__item__title {
+      font-size: .9rem;
+      height: 3rem; }
+  .section--teaser {
+    width: 100%;
+    padding: 0 20px; }
+  .section--eshop {
+    width: 100%;
+    padding: 0 20px; }
+    .section--eshop__list {
+      border: 1px solid #ccc; }
+      .section--eshop__list__item {
+        width: 100%;
+        height: 74px;
+        background-size: 48px;
+        background-position: 5% -12px;
+        border-top: none;
+        border-left: none;
+        border-right: none; }
+        .section--eshop__list__item:nth-child(2) {
+          background-position: 5% -106px; }
+        .section--eshop__list__item:nth-child(3) {
+          background-position: 5% -200px;
+          margin-bottom: -1px; }
+  .section--notice {
+    width: calc(100% - 40px);
+    margin: 0 20px 100px; }
+    .section--notice__header {
+      margin-right: 4%; }
+  .section--go-top {
+    height: 47px; }
+    .section--go-top__inner {
+      width: 100%;
+      padding: 12px;
+      text-align: center; }
+      .section--go-top__inner__title {
+        float: none;
+        background-position: left top;
+        background-size: 150px 63px;
+        width: 97px;
+        height: 23px; }
+      .section--go-top__inner__btn {
+        position: absolute;
+        right: 10px; }
+  .section--bottom__header__sns-list {
+    margin-bottom: 30px; }
+  .section--bottom__footer__list {
+    font-size: .7rem;
+    text-align: center; }
+    .section--bottom__footer__list__item {
+      width: 25%;
+      margin-right: -4px; }
+      .section--bottom__footer__list__item__sub-list {
+        display: none; }
+  .footer__inner {
+    width: 100%;
+    padding: 30px 20px; }
+    .footer__inner__sup {
+      float: none;
+      text-align: left; } }
+
+@media screen and (max-width: 1025px) {
+  .section--news__list__item:nth-child(n+5) {
+    display: none; } }
