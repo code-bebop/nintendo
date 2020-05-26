@@ -323,7 +323,8 @@
       padding-right: 16px; }
 
 .section--notice {
-  width: 1200px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
   margin: 0 auto 100px;
   border: 1px solid #ccc;
   border-left: none;
@@ -345,12 +346,21 @@
       box-sizing: content-box;
       vertical-align: middle; }
   .section--notice__list {
-    display: inline-block; }
+    display: inline-block;
+    width: calc(100% - 275px); }
     .section--notice__list__item {
       display: inline-block;
-      margin-left: 1em; }
+      max-width: calc(50% - 40px);
+      font-size: .9rem;
+      margin-right: 1.9rem; }
+      .section--notice__list__item:last-child {
+        margin: 0; }
       .section--notice__list__item__title {
-        color: #666; }
+        color: #666;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-left: 1em; }
         .section--notice__list__item__title:before {
           content: "\2022";
           color: #E60012;
@@ -626,11 +636,6 @@
         .section--eshop__list__item:nth-child(3) {
           background-position: 5% -200px;
           margin-bottom: -1px; }
-  .section--notice {
-    width: calc(100% - 40px);
-    margin: 0 20px 100px; }
-    .section--notice__header {
-      margin-right: 4%; }
   .section--go-top {
     height: 47px; }
     .section--go-top__inner {
@@ -654,8 +659,6 @@
     .section--bottom__footer__list__item {
       width: 25%;
       margin-right: -4px; }
-      .section--bottom__footer__list__item__sub-list {
-        display: none; }
   .footer__inner {
     width: 100%;
     padding: 30px 20px; }
@@ -663,6 +666,40 @@
       float: none;
       text-align: left; } }
 
+@media screen and (max-width: 1040px) {
+  .section--notice {
+    width: calc(100% - 40px);
+    margin: 0 20px 100px; }
+    .section--notice__header {
+      margin-right: 4%; }
+    .section--notice__list {
+      overflow: hidden;
+      width: calc(100% - 170px);
+      vertical-align: middle; }
+      .section--notice__list__item__title {
+        text-overflow: inherit;
+        overflow: visible; } }
+
 @media screen and (max-width: 1025px) {
   .section--news__list__item:nth-child(n+5) {
+    display: none; } }
+
+@media screen and (max-width: 785px) {
+  .section--games {
+    width: 100%;
+    padding: 0; }
+    .section--games__title {
+      padding-left: 30px;
+      font-size: 1.5rem; }
+      .section--games__title__sub-title {
+        display: none; }
+    .section--games__list .slick-slide {
+      margin: 0 5px; }
+    .section--games__list__item__main {
+      display: none; }
+    .section--games__list__item__footer {
+      display: none; } }
+
+@media screen and (max-width: 768px) {
+  .section--slide__info {
     display: none; } }

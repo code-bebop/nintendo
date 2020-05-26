@@ -490,7 +490,8 @@ $n-orange: #FE7C0A;
 }
 
 .section--notice {
-  width: 1200px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
   margin: 0 auto 100px;
   border: 1px solid #ccc;
   border: {
@@ -520,14 +521,27 @@ $n-orange: #FE7C0A;
   }
   &__list {
     display: inline-block;
+    width: calc(100% - 275px);
     &__item {
       display: inline-block;
-      margin: {
-        left: 1em;
+      max-width: calc(50% - 40px);
+      font: {
+        size: .9rem;
       }
-
+      margin: {
+        right: 1.9rem;
+      }
+      &:last-child {
+        margin: 0;
+      }
       &__title {
         color: #666;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: {
+          left: 1em;
+        }
         &:before {
           content: "\2022";
           color: $n-red;
@@ -945,14 +959,6 @@ $n-orange: #FE7C0A;
     }
   }
   
-  .section--notice {
-    width: calc(100% - 40px);
-    margin: 0 20px 100px;
-    &__header {
-      margin-right: 4%;
-    }
-  }
-  
   .section--go-top {
     height: 47px;
     &__inner {
@@ -991,7 +997,6 @@ $n-orange: #FE7C0A;
 					&__title {
 					}
 					&__sub-list {
-						display: none;
 					}
         }
       }
@@ -1010,6 +1015,27 @@ $n-orange: #FE7C0A;
   }
 }
 
+@media screen and (max-width: 1040px) {
+  .section--notice {
+    width: calc(100% - 40px);
+    margin: 0 20px 100px;
+    &__header {
+      margin-right: 4%;
+    }
+    &__list {
+      overflow: hidden;
+      width: calc(100% - 170px);
+      vertical-align: middle;
+      &__item {
+        &__title {
+          text-overflow: inherit;
+          overflow: visible;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1025px) {
   .section--news {
     &__list {
@@ -1018,6 +1044,43 @@ $n-orange: #FE7C0A;
           display: none;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .section--games {
+    width: 100%;
+    padding: 0;
+    &__title {
+      padding-left: 30px;
+      font: {
+        size: 1.5rem;
+      }
+      &__sub-title {
+        display: none;
+      }
+    }
+    &__list {
+      .slick-slide {
+        margin: 0 5px;
+      }
+      &__item {
+        &__main {
+          display: none;
+        }
+        &__footer {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section--slide {
+    &__info {
+      display: none;
     }
   }
 }

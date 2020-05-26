@@ -1,23 +1,58 @@
-function footerDropdown() {
-  let mql = window.matchMedia("screen and (max-width: 1200px)");
+function resizeHandler(handler) {
+  handler();
+  
+  $(window).resize((e)=>{
+    handler();
+  })
+}
 
-	function footerHandler() {
-		if(mql.matches) {
-			$(".section--bottom__footer__list__item__title").click(
-					function() {
-						$(".section--bottom__footer__list__item").find("ul").slideUp();
-						$(this).next().stop().slideToggle();
-				}
-			)
-		} else {
-			$(".section--bottom__footer__list__item__title").off();
-		}		
-	}
-	footerHandler();
-	
-	$(window).resize((e)=>{
-		footerHandler();
-	})
+function gamesSlick() {
+  
+  function gamesHandler() {
+    let mql = window.matchMedia("screen and (max-width: 785px)");
+    
+    if(mql.matches) {
+      if(!$(".section--games__list").hasClass("slick-initialized")) {
+        $(".section--games__list").slick({
+          arrows: false,
+          slideToShow: 3,
+          centerMode: true,
+          centerPadding: "40px"
+        });
+      }
+    } else {
+      if($(".section--games__list").hasClass("slick-initialized")) {
+        $(".section--games__list").slick("unslick");
+      }
+    }
+  }
+  
+  resizeHandler(gamesHandler);
+  
+}
+
+function noticeSlide() {
+  
+  function noticeHandler() {
+    let mql = window.matchMedia("screen and (max-width: 1042px)");
+    
+    if(mql.matches) {
+      if(!$(".section--notice__list").hasClass("slick-initialized")) {
+        $(".section--notice__list").slick({
+          vertical: true,
+          arrows: false,
+          autoplay: true
+        })
+      }
+    } else {
+      if($(".section--notice__list").hasClass("slick-initialized")) {
+        $(".section--notice__list").slick("unslick");
+      }
+    }  
+  }
+  
+  resizeHandler(noticeHandler);
+  
 }
 
 function searchDropdown() {
@@ -45,8 +80,8 @@ function gnbDropdown() {
 }
 
 function navEffect() {
-  let mql = window.matchMedia("screen and (max-width: 1200px)");
   function navHandler() {
+    let mql = window.matchMedia("screen and (max-width: 1200px)");
     if(mql.matches) {
       $(".header__nav__container__item").off();
       $(".header__nav__container").click((e)=>{
@@ -72,11 +107,8 @@ function navEffect() {
       $(".header__nav").css("display", "block");
     }
   }
-  navHandler();
-  $(window).resize((e)=>{
-    mql = window.matchMedia("screen and (max-width: 1200px)");
-    navHandler();
-  })
+  
+  resizeHandler(navHandler);
 }
 
 function pagingInfo() {
@@ -90,11 +122,18 @@ function pagingInfo() {
 
 function slick() {
     $(".section--slide__container").slick({
-    arrows: true,
+    arrows: false,
     prevArrow: $(".section--slide__info__btn--left"),
     nextArrow: $(".section--slide__info__btn--right"),
     autoplay: true,
-    autoplaySpeed: 5000
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+        }
+      }
+    ]
   });
 }
 
@@ -103,7 +142,8 @@ function init() {
   navEffect();
   gnbDropdown();
   searchDropdown();
-	footerDropdown();
+  noticeSlide();
+  gamesSlick();
 }
 
 $(document).ready(function(){
