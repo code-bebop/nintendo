@@ -42,6 +42,11 @@ $n-orange: #FE7C0A;
         font: {
           size: .95rem;
         }
+        &:last-child {
+          .header__nav__container__item__list {
+            border-bottom: 1px solid #D6D6D6;
+          }
+        }
         a {
           display: block;
           &:hover {
@@ -244,7 +249,11 @@ $n-orange: #FE7C0A;
 					size: 1.2rem;
 					weight: 600;
 				}
-				display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
 				height: 72px;
 				letter-spacing: -.05rem;
 				line-height: 1.5rem;
@@ -260,7 +269,7 @@ $n-orange: #FE7C0A;
     }
     &__btn--more {
       position: absolute;
-      top: -4.5rem;
+      top: -4.2rem;
       right: 0;
       color: $n-red;
       font: {
@@ -276,7 +285,7 @@ $n-orange: #FE7C0A;
 .section--banner--shop {
   width: 100%;
   margin: {
-    bottom: 85px;
+    bottom: 125px;
   }
   background: {
     color: $n-orange;
@@ -290,7 +299,7 @@ $n-orange: #FE7C0A;
 
 .section--games {
   width: 1200px;
-  margin: 70px auto 0;
+  margin: 0 auto;
   &__title {
     font: {
       size: 2rem;
@@ -412,20 +421,27 @@ $n-orange: #FE7C0A;
   width: 1200px;
   margin: 0 auto 80px;
   &__item {
-    height: 140px;
     width: calc((100% - 64px) / 3);
+    height: 140px;
     display: inline-block;
     margin-right: 27px;
+    &:nth-child(1) {
+      background: url(../img/b32218c9ab55df3e04ba5ecc84fae754.jpg) no-repeat center center;
+      background-size: cover;
+    }
+    &:nth-child(2) {
+      background: url(../img/0d2c5cda3ae2a4c43394a49e107e5a4f.jpg) no-repeat center center;
+      background-size: cover;
+    }
     &:last-child {
+      background: url(../img/0d743585eac0887d1639e3b43afc0f79.jpg) no-repeat center center;
+      background-size: cover;
       margin: 0;
     }
     a {
       display: block;
       width: 100%;
       height: 100%;
-    }
-    &__img {
-      width: 100%;
     }
   }
 }
@@ -665,14 +681,12 @@ $n-orange: #FE7C0A;
     }
     &__btn-list {
       display: inline-block;
+      text-align: center;
       &__nintendo {
         background: url(../img/bottom.png) no-repeat top left;
         display: inline-block;
         width: 370px;
         height: 60px;
-        margin: {
-          right: 25px;
-        }
       }
       &__amiibo {
         background: url(../img/btn_footer_amiibo.png) no-repeat top left;
@@ -830,13 +844,13 @@ $n-orange: #FE7C0A;
     }
     &__search {
       width: 56px;
-      right: 70px;
+      right: 60px;
       &:after {
         background-position: left -15px;
         background-size: 32px 48px;
         width: 28px;
         height: 28px;
-        left: 65%;
+        
       }
     }
     &__nav {
@@ -864,7 +878,7 @@ $n-orange: #FE7C0A;
 							bottom: 1px solid #D6D6D6;
 						}
 						font: {
-							size: 1.1rem;
+							size: 1.08rem;
 							weight: 600;
 						}
 						color: #000;
@@ -898,24 +912,65 @@ $n-orange: #FE7C0A;
     }
   }
   
+  .section--slide {
+    &__info {
+      padding: 0 20px;
+      &__index {
+        line-height: normal;
+        font: {
+          size: 1.5rem;
+        }
+      }
+      &__btn {
+        font: {
+          size: 2rem;
+        }
+      }
+      &__btn--right {
+        float: right;
+      }
+      &__btn--left {
+        float: left;
+      }
+    }
+  }
+  
   .section--news {
     width: 100%;
     padding: 0 20px;
+    margin: {
+      top: 0;
+      bottom: 30px;
+    }
     &__list {
       &__item {
         &__title {
           font: {
             size: .9rem;
           }
-          line-height: normal;
+          line-height: 1rem;
+          height: 3rem;
         }
       }
+      &__btn--more {
+        top: -3.8rem;
+        font: {
+          size: 1.2rem;
+        }
+      }
+    }
+  }
+  
+  .section--banner--shop {
+    margin: {
+      bottom: 80px;
     }
   }
   
   .section--games {
     width: 100%;
     padding: 0 20px;
+    margin-bottom: 0;
     &__list {
       &__item {
         &__title {
@@ -1034,15 +1089,42 @@ $n-orange: #FE7C0A;
       }
     }
   }
+  
+  .section--bottom {
+    &__header {
+      &__sns-list {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1025px) {
   .section--news {
+    &__title {
+      font: {
+        size: 1.5rem;
+      }
+      &__sub-title {
+        display: none;
+      }
+    }
     &__list {
       &__item {
         &:nth-child(n+5) {
           display: none;
         }
+      }
+    }
+  }
+  
+  .section--games {
+     &__title {
+      font: {
+        size: 1.5rem;
+      }
+      &__sub-title {
+        display: none;
       }
     }
   }
@@ -1053,13 +1135,7 @@ $n-orange: #FE7C0A;
     width: 100%;
     padding: 0;
     &__title {
-      padding-left: 30px;
-      font: {
-        size: 1.5rem;
-      }
-      &__sub-title {
-        display: none;
-      }
+      padding-left: 20px;
     }
     &__list {
       .slick-slide {
@@ -1079,8 +1155,110 @@ $n-orange: #FE7C0A;
 
 @media screen and (max-width: 768px) {
   .section--slide {
+    margin-bottom: 40px;
     &__info {
       display: none;
+    }
+  }
+  
+  .section--news {
+    margin-bottom: 30px;
+    &__list {
+      &__item {
+        width: calc((100% - 25px)/2);
+        margin-right: 20px;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  .section--banner--shop {
+    margin-bottom: 30px;
+  }
+  
+  .section--teaser {
+    &__item {
+      width: 100%;
+      height: 175px;
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .section--notice {
+    &__header {
+      display: none;
+    }
+    &__list {
+      width: 100%;
+    }
+  }
+  
+  .section--bottom {
+    &__header {
+      width: 100%;
+      &__btn-list {
+        width: 100%;
+        padding: 0 40px;
+        &__nintendo {
+          width: 100%;
+          height: 44px;
+          margin-bottom: 8px;
+          background-position: center -131px;
+          background-size: 182px 166px;
+          background-color: $n-red;
+          border-radius: 5px;
+        }
+        &__amiibo {
+          width: 100%;
+          height: 44px;
+          background-position: center -34px;
+          background-size: 322px 80px;
+          border: solid 1px #DADADA;
+          border-radius: 5px;
+        }
+      }
+    }
+    &__footer {
+      &__list {
+        &__item {
+          width: 100%;
+          &:last-child {
+            .section--bottom__footer__list__item__sub-list {
+              border-bottom: 1px solid #D6D6D6;
+            }
+          }
+          &__title {
+            background: #fff;
+            text-align: left;
+            padding: 20px 0;
+            border: {
+              top: 1px solid #D6D6D6;
+              bottom: 1px solid #D6D6D6;
+            }
+            font: {
+              size: 1.08rem;
+            }
+            margin-bottom: -1px;
+            outline: none;
+            &:before {
+              display: none;
+            }
+          }
+          &__sub-list {
+            background: #F7F7F7;
+            font: {
+              size: .95rem;
+              weight: 300;
+            }
+            text-align: left;
+          }
+        }
+      }
     }
   }
 }

@@ -6,6 +6,27 @@ function resizeHandler(handler) {
   })
 }
 
+function footerArc() {
+  
+  function footerHandler() {
+    let mql = window.matchMedia("screen and (max-width: 768px)");
+    
+    if(mql.matches) {
+      $(".section--bottom__footer__list").accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: "content"
+      });
+    } else {
+      if($(".section--bottom__footer__list").hasClass("ui-accordion")) {
+        $(".section--bottom__footer__list").accordion("destroy");
+      }
+    }
+  }
+  
+  resizeHandler(footerHandler);
+}
+
 function gamesSlick() {
   
   function gamesHandler() {
@@ -144,6 +165,7 @@ function init() {
   searchDropdown();
   noticeSlide();
   gamesSlick();
+  footerArc();
 }
 
 $(document).ready(function(){
