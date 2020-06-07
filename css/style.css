@@ -6,7 +6,7 @@
   .header__logo {
     width: 15%;
     background-color: #E60012; }
-    .header__logo a {
+    .header__logo__img {
       display: block;
       height: 74px;
       background: url("../img/logo_nintendo_red.gif") no-repeat center center; }
@@ -28,9 +28,9 @@
       font-size: .95rem; }
       .header__nav__container__item:last-child .header__nav__container__item__list {
         border-bottom: 1px solid #D6D6D6; }
-      .header__nav__container__item a {
+      .header__nav__container__item__title {
         display: block; }
-        .header__nav__container__item a:hover {
+        .header__nav__container__item__title:hover {
           color: #E60012; }
       .header__nav__container__item__list {
         position: absolute;
@@ -124,12 +124,18 @@
     margin-top: 15px; }
     .section--slide__info__btn {
       display: inline-block;
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
       font-size: 3rem; }
     .section--slide__info__index {
       display: inline-block;
       height: 50px;
       line-height: 50px;
       vertical-align: bottom;
+      margin-bottom: 5px;
+      margin-left: 8px;
       font-size: 2rem;
       font-weight: 600; }
 
@@ -528,7 +534,7 @@
     text-align: left;
     line-height: 70px;
     padding-left: 20px; }
-    .header__logo a {
+    .header__logo__img {
       background: url(../img/logo_nintendo_red_m.gif) no-repeat center center;
       background-size: cover;
       width: 104px;
@@ -591,7 +597,7 @@
       border-right: none;
       line-height: 50px;
       margin-bottom: -1px; }
-      .header__nav__container__item a {
+      .header__nav__container__item__title {
         outline: none;
         background: #fff;
         border-top: 1px solid #D6D6D6;

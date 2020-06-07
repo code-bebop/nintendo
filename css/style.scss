@@ -13,7 +13,7 @@ $n-orange: #FE7C0A;
     background: {
       color: $n-red;
     }
-    a {
+    &__img {
       display: block;
       height: 74px;
       background: url("../img/logo_nintendo_red.gif") no-repeat center center;  
@@ -47,7 +47,7 @@ $n-orange: #FE7C0A;
             border-bottom: 1px solid #D6D6D6;
           }
         }
-        a {
+        &__title {
           display: block;
           &:hover {
             color: $n-red;
@@ -172,6 +172,10 @@ $n-orange: #FE7C0A;
     }
     &__btn {
       display: inline-block;
+			cursor: pointer;
+			background: none;
+			border: none;
+			outline: none;
       font: {
         size: 3rem;
       }
@@ -181,6 +185,10 @@ $n-orange: #FE7C0A;
       height: 50px;
       line-height: 50px;
       vertical-align: bottom;
+			margin: {
+				bottom: 5px;
+				left: 8px;
+			}
       font: {
         size: 2rem;
         weight: 600;
@@ -793,7 +801,7 @@ $n-orange: #FE7C0A;
       text-align: left;
       line-height: 70px;
       padding-left: 20px;
-      a {
+      &__img {
         background: url(../img/logo_nintendo_red_m.gif) no-repeat center center;
         background-size: cover;
         width: 104px;
@@ -870,7 +878,7 @@ $n-orange: #FE7C0A;
 					border-right: none;
 					line-height: 50px;
 					margin-bottom: -1px;
-					a {
+					&__title {
 						outline: none;
 						background: #fff;
 						border: {
